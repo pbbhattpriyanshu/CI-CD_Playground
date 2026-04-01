@@ -18,10 +18,10 @@ jobs:       # all the jobs that will run as part of this workflow
         node-version: [20.x, 22.x]
 
     steps:          # the individual steps that will be executed as part of this job
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4  # checks out the repository code so that the workflow can access it and run commands on it, such as installing dependencies and running tests
 
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v4       # sets up the specified version of Node.js for the job, allowing you to run your Node.js application and tests in that environment
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
