@@ -1,4 +1,6 @@
-import sum from "./sum.js";
+import { describe, test, expect } from '@jest/globals';
+import sum from "../Services/sum.js";
+
 describe('sum function', () => {
     test('sum of 1 and 2 should be 3', () => {
         expect(sum(1, 2)).toBe(3);

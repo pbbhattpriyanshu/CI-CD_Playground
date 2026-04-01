@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import product from "./product.js";
+import product from "../Services/product.js";
 
 describe('product function', () => {
     test('product of 3 and 4 should be 12', () => {

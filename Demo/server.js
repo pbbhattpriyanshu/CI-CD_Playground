@@ -1,6 +1,6 @@
 import express from 'express';
-import sum from './sum.js';
-import product from './product.js';
+import sum from './Services/sum.js';
+import product from './Services/product.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
