@@ -1,6 +1,7 @@
 import express from 'express';
 import sum from './Services/sum.js';
 import product from './Services/product.js';
+import sub from './Services/sub.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,6 +22,13 @@ app.get('/getProduct/:a/:b', async (req, res) => {
     console.log(`Calculating product of ${a} and ${b}`);
     const result = product(Number(a), Number(b));
     res.send(`The product of ${a} and ${b} is ${result}`);
+});
+
+app.get('/getSub/:a/:b', async (req, res) => {
+    const { a, b } = req.params;
+    console.log(`Calculating difference of ${a} and ${b}`);
+    const result = sub(Number(a), Number(b));
+    res.send(`The difference of ${a} and ${b} is ${result}`);
 });
 
 app.listen(PORT, () => {
